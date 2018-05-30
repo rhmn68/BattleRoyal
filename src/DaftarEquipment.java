@@ -21,8 +21,9 @@ public class DaftarEquipment {
     //set weapon
     public void setWeapon(){
         Weapon weapon;
-        weapon = new Weapon(1, "Tombak",20,0,3,10,6);addWeapon(weapon);
-        weapon = new Weapon(2, "Pedang",30,0,3,6,4);addWeapon(weapon);
+        weapon = new Weapon(1, "Pedang",10,0,5,5,10);addWeapon(weapon);
+        weapon = new Weapon(2, "Tombak",7,0,5,10,5);addWeapon(weapon);
+        weapon = new Weapon(3, "Wand",8,0,10,5,5);addWeapon(weapon);
     }
 
     //get weapon
@@ -38,8 +39,9 @@ public class DaftarEquipment {
     //set shield
     public void setShield(){
         Shield shield;
-        shield = new Shield(1, "Tombak",20,0,3,10,6);addShield(shield);
-        shield = new Shield(2, "Pedang",30,0,3,6,4);addShield(shield);
+        shield = new Shield(1, "Shield",0,3,2,3,7);addShield(shield);
+        shield = new Shield(2, "Armor",0,5,3,7,3);addShield(shield);
+        shield = new Shield(3, "Cloak",0,2,7,3,2);addShield(shield);
     }
 
     //get shield
@@ -55,8 +57,10 @@ public class DaftarEquipment {
     //set skill
     public void setSkill(){
         Skill skill;
-        skill = new Skill(1, "Tombak",20,0,3,10,6);addSkill(skill);
-        skill = new Skill(2, "Pedang",30,0,3,6,4);addSkill(skill);
+        skill = new Skill(1, "Fire",20,0,3,10,6);addSkill(skill);
+        skill = new Skill(2, "Lightning",30,0,3,6,4);addSkill(skill);
+        skill = new Skill(3, "Water",30,0,3,6,4);addSkill(skill);
+        skill = new Skill(4, "Wind",30,0,3,6,4);addSkill(skill);
     }
 
     //get skill
@@ -72,8 +76,9 @@ public class DaftarEquipment {
     //set avatar
     public void setAvatar(){
         Avatar avatar;
-        avatar = new Avatar(1, "Tombak",20,0,3,10,6);addAvatar(avatar);
-        avatar = new Avatar(2, "Pedang",30,0,3,6,4);addAvatar(avatar);
+        avatar = new Avatar(1, "Warior",30,3,5,5,10);addAvatar(avatar);
+        avatar = new Avatar(2, "Tanker",10,5,5,10,5);addAvatar(avatar);
+        avatar = new Avatar(3, "Wizard",20,2,10,5,5);addAvatar(avatar);
     }
 
     //get avatar
@@ -83,29 +88,37 @@ public class DaftarEquipment {
 
 
     public void printWeapon(){
+        int cc = 1;
         for (Weapon weapon:arrWeapon.values()){
-            System.out.println("Name "+weapon.getName());
+            System.out.println(cc +". " +weapon.getName());
+            cc++;
         }
     }
 
     public void printShield(){
+        int cc = 1;
         System.out.println("");
         for (Shield shield:arrShield.values()){
-            System.out.println("Name "+shield.getName());
+            System.out.println(cc + ". "+shield.getName());
+            cc++;
         }
     }
 
     public void printSkill(){
+        int cc = 1;
         System.out.println("");
         for (Skill skill:arrSkill.values()){
-            System.out.println("Name "+skill.getName());
+            System.out.println(cc+". "+skill.getName());
+            cc++;
         }
     }
 
     public void printAvatar(){
+        int cc = 1;
         System.out.println("");
         for (Avatar avatar:arrAvatar.values()){
-            System.out.println("Name "+avatar.getName());
+            System.out.println(cc+". "+avatar.getName());
+            cc++;
         }
     }
 
